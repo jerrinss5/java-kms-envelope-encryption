@@ -1,0 +1,21 @@
+apply plugin: 'java'
+apply plugin: 'application'
+mainClassName = 'crypto.EncryptionViewer'
+
+repositories {
+	mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    implementation platform('software.amazon.awssdk:bom:2.15.8')
+    implementation 'software.amazon.awssdk:kms'
+    implementation 'software.amazon.awssdk:auth'
+}
+
+jar {
+    archiveBaseName = 'encryption-service'
+    archiveVersion =  '0.1.0'
+}
