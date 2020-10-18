@@ -23,7 +23,7 @@ public class EncryptionViewer {
 //        System.out.println("Decrypted Data: "+pText);
 
         // AWS KMS Encryption
-        String keyId = "e4d63022-8ea2-4289-bc79-575c9eef895c";
+        String keyId = "";
         AWSDataKey kms = new AWSDataKey();
         KmsClient kmsClient = kms.kmsInitialization(keyId);
 
